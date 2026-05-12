@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: Georgia, serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  background-color: #111111;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  color: #00e676;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav ul a {
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding-bottom: 3px;
+}
+
+nav ul a.ativo {
+  color: #00e676;
+  border-bottom: 2px solid #00e676;
+}
+
+nav ul a:hover {
+  color: #00e676;
+}
+
+.nav-direita {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-saldo {
+  color: #00e676;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-sair {
+  padding: 7px 16px;
+  background: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  color: #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Georgia, serif;
+}
+
+.btn-sair:hover {
+  color: #fff;
+}
+
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 28px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+main h1 {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+
+.grid-topo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+
+aside.saldo-card {
+  background: linear-gradient(135deg, #0f1f0f, #0a140a);
+  border: 1px solid #00e676;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+aside.saldo-card .saldo-label {
+  font-size: 11px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+aside.saldo-card .saldo-valor {
+  font-size: 38px;
+  font-weight: bold;
+  color: #00e676;
+  margin-bottom: 22px;
+}
+
+aside.saldo-card .acoes {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-depositar {
+  flex: 1;
+  padding: 12px;
+  background: #00e676;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: Georgia, serif;
+}
+
+.btn-depositar:hover {
+  background: #00c853;
+}
+
+.btn-sacar {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #00e676;
+  color: #00e676;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: Georgia, serif;
+}
+
+.btn-sacar:hover {
+  background: #00e67615;
+}
+
+
+section.resumo {
+  background: #161616;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+section.resumo h2 {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+
+section.historico {
+  background: #161616;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+section.historico h2 {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+
+article.transacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+article.transacao:last-child {
+  border-bottom: none;
+}
+
+article.transacao .tx-desc {
+  font-size: 14px;
+  color: #ddd;
+}
+
+article.transacao .tx-data {
+  font-size: 12px;
+  color: #555;
+  margin-top: 3px;
+}
+
+article.transacao .tx-valor {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.positivo { color: #00e676; }
+.negativo { color: #ff5252; }
+
+footer {
+  background-color: #111111;
+  border-top: 1px solid #1e1e1e;
+  text-align: center;
+  padding: 14px;
+  font-size: 12px;
+  color: #444;
+}

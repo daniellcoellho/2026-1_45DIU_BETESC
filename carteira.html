@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BETESC — Carteira</title>
+  <link rel="stylesheet" href="carteira.css"/>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <p class="logo">BETESC</p>
+
+      <ul>
+        <li><a href="principal.html">Início</a></li>
+        <li><a href="carteira.html" class="ativo">Carteira</a></li>
+      </ul>
+
+      <div class="nav-direita">
+        <span class="nav-saldo">R$ 542,00</span>
+        <button class="btn-sair" onclick="window.location.href='login.html'">Sair</button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <h1>Minha Carteira 💰</h1>
+
+
+    <div class="grid-topo">
+
+   
+      <aside class="saldo-card">
+        <p class="saldo-label">Saldo Disponível</p>
+        <p class="saldo-valor">R$ 542,00</p>
+        <div class="acoes">
+          <button class="btn-depositar">💳 Depositar</button>
+          <button class="btn-sacar">📤 Sacar</button>
+        </div>
+      </aside>
+
+      <section class="resumo">
+        <h2>Resumo</h2>
+
+        <article class="transacao">
+          <div>
+            <p class="tx-desc">Total apostado</p>
+          </div>
+          <span class="tx-valor negativo">-R$ 150,00</span>
+        </article>
+
+        <article class="transacao">
+          <div>
+            <p class="tx-desc">Total ganho</p>
+          </div>
+          <span class="tx-valor positivo">+R$ 82,50</span>
+        </article>
+
+        <article class="transacao">
+          <div>
+            <p class="tx-desc">Total depositado</p>
+          </div>
+          <span class="tx-valor positivo">+R$ 500,00</span>
+        </article>
+      </section>
+
+    </div>
+
+    <section class="historico">
+      <h2>Histórico de Transações</h2>
+
+      <article class="transacao">
+        <div>
+          <p class="tx-desc">Depósito via PIX</p>
+          <p class="tx-data">Hoje, 09:15</p>
+        </div>
+        <span class="tx-valor positivo">+R$ 200,00</span>
+      </article>
+
+      <article class="transacao">
+        <div>
+          <p class="tx-desc">Ganho — CEAVI x CEFID</p>
+          <p class="tx-data">Ontem, 22:58</p>
+        </div>
+        <span class="tx-valor positivo">+R$ 82,50</span>
+      </article>
+
+      <article class="transacao">
+        <div>
+          <p class="tx-desc">Aposta — CEAVI x CEFID</p>
+          <p class="tx-data">Ontem, 20:00</p>
+        </div>
+        <span class="tx-valor negativo">-R$ 50,00</span>
+      </article>
+
+      <article class="transacao">
+        <div>
+          <p class="tx-desc">Saque via PIX</p>
+          <p class="tx-data">23/06, 14:00</p>
+        </div>
+        <span class="tx-valor negativo">-R$ 150,00</span>
+      </article>
+
+      <article class="transacao">
+        <div>
+          <p class="tx-desc">Depósito via Cartão</p>
+          <p class="tx-data">20/06, 10:30</p>
+        </div>
+        <span class="tx-valor positivo">+R$ 300,00</span>
+      </article>
+
+      <article class="transacao">
+        <div>
+          <p class="tx-desc">Aposta — CEART x ESAG</p>
+          <p class="tx-data">18/06, 18:00</p>
+        </div>
+        <span class="tx-valor negativo">-R$ 100,00</span>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 BETESC — Aposte com responsabilidade. +18</p>
+  </footer>
+
+</body>
+</html>

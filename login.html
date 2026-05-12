@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BETESC — Login</title>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <header>
+    <p class="logo">BETESC</p>
+    <p class="slogan">A melhor casa de apostas</p>
+  </header>
+
+  <main>
+    <section class="login-box">
+      <h2>Entrar na sua conta</h2>
+
+      <form id="form-login">
+
+        <div class="campo">
+          <label for="email">E-mail ou CPF</label>
+          <input type="text" id="email" name="email" placeholder="usuario@email.com" required/>
+        </div>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="••••••••" required/>
+        </div>
+
+        <button type="submit" class="btn-entrar">ENTRAR</button>
+
+      </form>
+
+      <p class="divisor">ou</p>
+
+      <button class="btn-google">🔵 Entrar com Google</button>
+
+      <p class="link-cadastro">
+        Não tem conta? <a href="#">Cadastre-se grátis →</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 BETESC — Jogue com responsabilidade. Maior de 18 anos.</p>
+  </footer>
+
+  <script>
+    document.getElementById('form-login').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+
+      if (email === '' || senha === '') {
+        alert('Preencha todos os campos.');
+        return;
+      }
+
+      // Navega para a página principal
+      window.location.href = 'principal.html';
+    });
+  </script>
+
+</body>
+</html>

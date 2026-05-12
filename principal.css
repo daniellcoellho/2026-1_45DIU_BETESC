@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: Georgia, serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  background-color: #111111;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  color: #00e676;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav ul a {
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding-bottom: 3px;
+}
+
+nav ul a.ativo {
+  color: #00e676;
+  border-bottom: 2px solid #00e676;
+}
+
+nav ul a:hover {
+  color: #00e676;
+}
+
+.nav-direita {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-saldo {
+  color: #00e676;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-depositar {
+  padding: 7px 16px;
+  background: transparent;
+  border: 1px solid #00e676;
+  color: #00e676;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Georgia, serif;
+}
+
+.btn-depositar:hover {
+  background-color: #00e67615;
+}
+
+.btn-sair {
+  padding: 7px 16px;
+  background: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  color: #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Georgia, serif;
+}
+
+.btn-sair:hover {
+  color: #fff;
+}
+
+
+main {
+  flex: 1;
+  max-width: 800px;
+  margin: 28px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+
+.abas {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.aba {
+  padding: 7px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  background: #1a1a1a;
+  color: #888;
+  border: 1px solid #2a2a2a;
+  font-family: Georgia, serif;
+}
+
+.aba.ativa {
+  background: #00e676;
+  color: #000;
+  font-weight: bold;
+  border-color: #00e676;
+}
+
+.aba:hover:not(.ativa) {
+  border-color: #00e676;
+  color: #00e676;
+}
+
+
+section.jogos {
+  margin-bottom: 28px;
+}
+
+section.jogos h2 {
+  font-size: 11px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-live {
+  background: #ff1744;
+  color: #fff;
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+
+article.jogo-card {
+  background: #161616;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 10px;
+}
+
+article.jogo-card header {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+article.jogo-card header p {
+  font-size: 11px;
+  color: #555;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.jogo-times {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.placar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.placar .sep {
+  font-size: 13px;
+  color: #444;
+  font-weight: normal;
+}
+
+.vs-texto {
+  font-size: 14px;
+  color: #444;
+  font-weight: normal;
+}
+
+
+.odds {
+  display: flex;
+  gap: 8px;
+}
+
+.odd-btn {
+  flex: 1;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  transition: border-color 0.15s;
+}
+
+.odd-btn:hover {
+  border-color: #00e676;
+}
+
+.odd-btn.selecionado {
+  border-color: #00e676;
+  background: #00e67612;
+}
+
+.odd-btn .odd-val {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00e676;
+}
+
+.odd-btn .odd-lab {
+  font-size: 10px;
+  color: #555;
+  margin-top: 4px;
+}
+
+
+footer {
+  background-color: #111111;
+  border-top: 1px solid #1e1e1e;
+  text-align: center;
+  padding: 14px;
+  font-size: 12px;
+  color: #444;
+}
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.80);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay.aberto {
+  display: flex;
+}
+
+.modal {
+  background-color: #161616;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  padding: 30px;
+  width: 440px;
+}
+
+.modal h2 {
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+
+.modal-linha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.modal-linha span:last-child {
+  color: #ddd;
+  font-weight: bold;
+}
+
+.modal-linha .destaque {
+  color: #00e676;
+}
+
+.modal hr {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 16px 0;
+}
+
+.modal label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 7px;
+}
+
+.modal input[type="number"] {
+  width: 100%;
+  padding: 11px 14px;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.modal input[type="number"]:focus {
+  outline: none;
+  border-color: #00e676;
+}
+
+.valores-rapidos {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.valores-rapidos button {
+  flex: 1;
+  padding: 8px;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+  color: #888;
+  font-size: 12px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+}
+
+.valores-rapidos button:hover,
+.valores-rapidos button.ativo {
+  border-color: #00e676;
+  color: #00e676;
+}
+
+.retorno-box {
+  background: #0d1a0d;
+  border: 1px solid #1a2e1a;
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.retorno-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.retorno-valor {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00e676;
+}
+
+.modal-saldo-info {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.modal-saldo-info strong {
+  color: #888;
+}
+
+.modal-acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-cancelar {
+  flex: 1;
+  padding: 13px;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  color: #aaa;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  color: #fff;
+}
+
+.btn-confirmar {
+  flex: 2;
+  padding: 13px;
+  background: #00e676;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+}
+
+.btn-confirmar:hover {
+  background: #00c853;
+}

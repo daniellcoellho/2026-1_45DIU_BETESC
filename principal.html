@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BETESC — Principal</title>
+  <link rel="stylesheet" href="principal.css"/>
+</head>
+<body>
+
+  
+  <header>
+    <nav>
+      <p class="logo">BETESC</p>
+
+      <ul>
+        <li><a href="principal.html" class="ativo">Início</a></li>
+        <li><a href="carteira.html">Carteira</a></li>
+      </ul>
+
+      <div class="nav-direita">
+        <span class="nav-saldo" id="saldo-nav">R$ 542,00</span>
+        <button class="btn-depositar" onclick="window.location.href='carteira.html'">Depositar</button>
+        <button class="btn-sair" onclick="window.location.href='login.html'">Sair</button>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main>
+
+    
+    <div class="abas">
+      <button class="aba ativa">⚽ Futebol</button>
+      <button class="aba">🏀 Basquete</button>
+      <button class="aba">🎾 Tênis</button>
+    </div>
+
+  
+    <section class="jogos">
+      <h2>Ao Vivo <span class="badge-live">LIVE</span></h2>
+
+      <article class="jogo-card">
+        <header>
+          <p>🏆 JUDESC</p>
+        </header>
+        <div class="jogo-times">
+          <span>CEAVI</span>
+          <div class="placar">
+            <span>2</span>
+            <span class="sep">vs</span>
+            <span>1</span>
+          </div>
+          <span>CEFID</span>
+        </div>
+        <div class="odds">
+          <button class="odd-btn" onclick="abrirModal('CEAVI', 'CEFID', 'CEAVI Vence', 1.65)">
+            <p class="odd-val">1.65</p>
+            <p class="odd-lab">CEAVI Vence</p>
+          </button>
+          <button class="odd-btn" onclick="abrirModal('CEAVI', 'CEFID', 'Empate', 3.40)">
+            <p class="odd-val">3.40</p>
+            <p class="odd-lab">Empate</p>
+          </button>
+          <button class="odd-btn" onclick="abrirModal('CEAVI', 'CEFID', 'CEFID Vence', 2.80)">
+            <p class="odd-val">2.80</p>
+            <p class="odd-lab">CEFID Vence</p>
+          </button>
+        </div>
+      </article>
+
+      <article class="jogo-card">
+        <header>
+          <p>🏆 JUDESC</p>
+        </header>
+        <div class="jogo-times">
+          <span>CEART</span>
+          <div class="placar">
+            <span>0</span>
+            <span class="sep">vs</span>
+            <span>0</span>
+          </div>
+          <span>ESAG</span>
+        </div>
+        <div class="odds">
+          <button class="odd-btn" onclick="abrirModal('CEART', 'ESAG', 'CEART Vence', 2.10)">
+            <p class="odd-val">2.10</p>
+            <p class="odd-lab">CEART Vence</p>
+          </button>
+          <button class="odd-btn" onclick="abrirModal('CEART', 'ESAG', 'Empate', 3.10)">
+            <p class="odd-val">3.10</p>
+            <p class="odd-lab">Empate</p>
+          </button>
+          <button class="odd-btn" onclick="abrirModal('CEART', 'ESAG', 'ESAG Vence', 2.25)">
+            <p class="odd-val">2.25</p>
+            <p class="odd-lab">ESAG Vence</p>
+          </button>
+        </div>
+      </article>
+    </section>
+
+    
+    <section class="jogos">
+      <h2>Em Breve</h2>
+
+      <article class="jogo-card">
+        <header>
+          <p>🏆 JUDESC <span style="margin-left:6px; color:#444;">| Hoje 18:00</span></p>
+        </header>
+        <div class="jogo-times">
+          <span>CAV</span>
+          <span class="vs-texto">vs</span>
+          <span>CCT</span>
+        </div>
+        <div class="odds">
+          <button class="odd-btn" onclick="abrirModal('CAV', 'CCT', 'CAV Vence', 1.90)">
+            <p class="odd-val">1.90</p>
+            <p class="odd-lab">CAV Vence</p>
+          </button>
+          <button class="odd-btn" onclick="abrirModal('CAV', 'CCT', 'Empate', 3.50)">
+            <p class="odd-val">3.50</p>
+            <p class="odd-lab">Empate</p>
+          </button>
+          <button class="odd-btn" onclick="abrirModal('CAV', 'CCT', 'CCT Vence', 2.40)">
+            <p class="odd-val">2.40</p>
+            <p class="odd-lab">CCT Vence</p>
+          </button>
+        </div>
+      </article>
+
+      <article class="jogo-card">
+        <header>
+          <p>🏆 JUDESC <span style="margin-left:6px; color:#444;">| Hoje 18:00</span></p>
+        </header>
+        <div class="jogo-times">
+          <span>CERES</span>
+          <span class="vs-texto">vs</span>
+          <span>CEPLAN</span>
+        </div>
+        <div class="odds">
+          <button class="odd-btn" onclick="abrirModal('CERES', 'CEPLAN', 'CERES Vence', 1.90)">
+            <p class="odd-val">1.90</p>
+            <p class="odd-lab">CERES Vence</p>
+          </button>
+          <button class="odd-btn" onclick="abrirModal('CERES', 'CEPLAN', 'Empate', 3.50)">
+            <p class="odd-val">3.50</p>
+            <p class="odd-lab">Empate</p>
+          </button>
+          <button class="odd-btn" onclick="abrirModal('CERES', 'CEPLAN', 'CEPLAN Vence', 2.40)">
+            <p class="odd-val">2.40</p>
+            <p class="odd-lab">CEPLAN Vence</p>
+          </button>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+ 
+  <footer>
+    <p>© 2026 BETESC — Aposte com responsabilidade. +18</p>
+  </footer>
+
+  
+  <div class="overlay" id="overlay" onclick="fecharModalFora(event)">
+    <div class="modal">
+      <h2>Realizar Aposta</h2>
+
+      <div class="modal-linha">
+        <span>Jogo</span>
+        <span id="modal-jogo">—</span>
+      </div>
+      <div class="modal-linha">
+        <span>Seleção</span>
+        <span id="modal-selecao" class="destaque">—</span>
+      </div>
+      <div class="modal-linha">
+        <span>Odd</span>
+        <span id="modal-odd" class="destaque">—</span>
+      </div>
+
+      <hr/>
+
+      <label for="valor-aposta">Valor da aposta (R$)</label>
+      <input type="number" id="valor-aposta" value="50" min="1" oninput="calcularRetorno()"/>
+
+      <div class="valores-rapidos">
+        <button onclick="setValor(10)">R$ 10</button>
+        <button onclick="setValor(25)">R$ 25</button>
+        <button onclick="setValor(50)" class="ativo">R$ 50</button>
+        <button onclick="setValor(100)">R$ 100</button>
+      </div>
+
+      <div class="retorno-box">
+        <span class="retorno-label">Retorno potencial</span>
+        <span class="retorno-valor" id="retorno-valor">R$ 0,00</span>
+      </div>
+
+      <p class="modal-saldo-info">
+        Saldo disponível: <strong id="saldo-modal">R$ 542,00</strong>
+      </p>
+
+      <div class="modal-acoes">
+        <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+        <button class="btn-confirmar" onclick="confirmarAposta()">✓ Confirmar Aposta</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+   
+    let saldo = 54200;
+    let oddAtual = 1;
+
+  
+    function atualizarSaldo() {
+      const formatado = 'R$ ' + (saldo / 100).toFixed(2).replace('.', ',');
+      document.getElementById('saldo-nav').textContent = formatado;
+      document.getElementById('saldo-modal').textContent = formatado;
+    }
+
+   
+    function abrirModal(time1, time2, selecao, odd) {
+      oddAtual = odd;
+      document.getElementById('modal-jogo').textContent = time1 + ' vs ' + time2;
+      document.getElementById('modal-selecao').textContent = '🏆 ' + selecao;
+      document.getElementById('modal-odd').textContent = '× ' + odd;
+      document.getElementById('valor-aposta').value = 50;
+      calcularRetorno();
+      document.getElementById('overlay').classList.add('aberto');
+    }
+
+    
+    function fecharModalFora(event) {
+      if (event.target === document.getElementById('overlay')) {
+        fecharModal();
+      }
+    }
+
+    
+    function fecharModal() {
+      document.getElementById('overlay').classList.remove('aberto');
+    }
+
+   
+    function calcularRetorno() {
+      const valor = parseFloat(document.getElementById('valor-aposta').value) || 0;
+      const retorno = (valor * oddAtual).toFixed(2);
+      document.getElementById('retorno-valor').textContent = 'R$ ' + retorno.replace('.', ',');
+    }
+
+   
+    function setValor(v) {
+      document.getElementById('valor-aposta').value = v;
+      
+      document.querySelectorAll('.valores-rapidos button').forEach(function(btn) {
+        btn.classList.remove('ativo');
+        if (btn.textContent === 'R$ ' + v) btn.classList.add('ativo');
+      });
+      calcularRetorno();
+    }
+
+    function confirmarAposta() {
+      const valor = parseFloat(document.getElementById('valor-aposta').value);
+
+      if (!valor || valor <= 0) {
+        alert('Digite um valor válido.');
+        return;
+      }
+
+      const valorCentavos = Math.round(valor * 100);
+
+      if (valorCentavos > saldo) {
+        alert('Saldo insuficiente.');
+        return;
+      }
+
+      saldo -= valorCentavos;
+      atualizarSaldo();
+
+      const selecao = document.getElementById('modal-selecao').textContent;
+      const retorno = document.getElementById('retorno-valor').textContent;
+
+      alert('Aposta confirmada!\n' + selecao + '\nValor: R$ ' + valor.toFixed(2) + '\nRetorno potencial: ' + retorno);
+      fecharModal();
+    }
+  </script>
+
+</body>
+</html>
