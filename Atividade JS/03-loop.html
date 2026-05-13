@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop de 1 a 10</title>
+</head>
+<body>
+
+    <h1>Loop de 1 a 10</h1>
+
+    <button onclick="imprimirNumeros()">Imprimir números</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+        function imprimirNumeros() {
+            var lista = document.getElementById("lista");
+            lista.innerHTML = "";
+
+            for (var i = 1; i <= 10; i++) {
+                var item = document.createElement("li");
+                item.textContent = i;
+                lista.appendChild(item);
+            }
+        }
+    </script>
+
+</body>
+</html>

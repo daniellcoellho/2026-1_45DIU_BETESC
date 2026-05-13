@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtrar números maiores que 10</title>
+</head>
+<body>
+
+    <h1>Filtrar números maiores que 10</h1>
+
+    <button onclick="filtrar()">Filtrar</button>
+
+    <p id="original"></p>
+    <p id="filtrado"></p>
+
+    <script>
+        var numeros = [3, 15, 7, 22, 10, 11, 5, 30, 8, 14];
+
+        document.getElementById("original").textContent = "Lista original: " + numeros.join(", ");
+
+        function filtrar() {
+            var maioresQue10 = numeros.filter(function(n) {
+                return n > 10;
+            });
+
+            document.getElementById("filtrado").textContent = "Maiores que 10: " + maioresQue10.join(", ");
+        }
+    </script>
+
+</body>
+</html>

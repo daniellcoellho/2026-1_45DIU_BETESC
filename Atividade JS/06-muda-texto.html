@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Botão que muda texto</title>
+</head>
+<body>
+
+    <h1>Botão que muda texto</h1>
+
+    <p id="texto">Este é o texto original.</p>
+
+    <button onclick="mudarTexto()">Mudar texto</button>
+
+    <script>
+        function mudarTexto() {
+            var paragrafo = document.getElementById("texto");
+
+            if (paragrafo.textContent === "Este é o texto original.") {
+                paragrafo.textContent = "O texto foi alterado pelo JavaScript!";
+            } else {
+                paragrafo.textContent = "Este é o texto original.";
+            }
+        }
+    </script>
+
+</body>
+</html>

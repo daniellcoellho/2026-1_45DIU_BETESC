@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Objeto de Usuário</title>
+</head>
+<body>
+
+    <h1>Objeto de Usuário</h1>
+
+    <button onclick="exibirDados()">Exibir dados</button>
+
+    <p id="dados"></p>
+
+    <script>
+        var usuario = {
+            nome: "Ana Silva",
+            idade: 20,
+            email: "ana@email.com",
+            curso: "Informática"
+        };
+
+        function exibirDados() {
+            var texto = "Nome: " + usuario.nome + " | ";
+            texto += "Idade: " + usuario.idade + " | ";
+            texto += "E-mail: " + usuario.email + " | ";
+            texto += "Curso: " + usuario.curso;
+
+            document.getElementById("dados").textContent = texto;
+        }
+    </script>
+
+</body>
+</html>
